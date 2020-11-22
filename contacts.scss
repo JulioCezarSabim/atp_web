@@ -1,0 +1,70 @@
+$bg-color: #282844;
+$contacts-font: 'Nunito', sans-serif;
+$color-1: white;
+$color-2: #595c77;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} // resets
+
+body {
+    background: $bg-color;
+} // body
+
+.main-container {
+
+    .insertNewContact-container {
+        
+    } // .insertNewContact-container
+
+    .contacts-list {
+        font-family: $contacts-font;
+
+        &--item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: $color-1 1px solid;
+            margin: 0 100px;
+            box-sizing: border-box;
+            padding: 25px 40px;
+
+            a {
+                display: flex;
+                text-decoration: none;
+                color: $color-1;
+
+                .contacts-list--item_contactPicture {
+                    box-sizing: border-box;
+                    padding: 0 20px;
+                
+                    img {
+                        border-radius: 100px;
+                        height: 60px;
+                    } // img
+                } // .contacts-list--item_contactPicture
+
+                .contacts-list--item_info {
+                    color: $color-2;
+
+                    &--name {
+                        color: $color-1;
+                        font-size: 22px;
+                    } // .contacts-list--item_info--name
+                } // .contacts-list--item_info
+            } // a
+
+            &_btnDelete {
+                font-size: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                i {
+                    color: $color-2;
+                } // i
+            } // .contacts-list--item_btnDelete
+        } // .contacts-list--item
+    } // .contacts-list
+} // .main-container

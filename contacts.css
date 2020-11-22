@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #282844;
+}
+
+.main-container .contacts-list {
+  font-family: "Nunito", sans-serif;
+}
+
+.main-container .contacts-list--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: white 1px solid;
+  margin: 0 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 25px 40px;
+}
+
+.main-container .contacts-list--item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+
+.main-container .contacts-list--item a .contacts-list--item_contactPicture {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.main-container .contacts-list--item a .contacts-list--item_contactPicture img {
+  border-radius: 100px;
+  height: 60px;
+}
+
+.main-container .contacts-list--item a .contacts-list--item_info {
+  color: #595c77;
+}
+
+.main-container .contacts-list--item a .contacts-list--item_info--name {
+  color: white;
+  font-size: 22px;
+}
+
+.main-container .contacts-list--item_btnDelete {
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container .contacts-list--item_btnDelete i {
+  color: #595c77;
+}
+/*# sourceMappingURL=contacts.css.map */
