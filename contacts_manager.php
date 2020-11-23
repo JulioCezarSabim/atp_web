@@ -17,4 +17,11 @@
         header("location: contacts.php");
     }
 
+    if (isset($_GET['delete'])) {
+        $id = $_GET['delete'];
+        $mysqli->query("DELETE FROM contacts WHERE id='$id'");
+
+        header('location: contacts.php');
+    }
+
     

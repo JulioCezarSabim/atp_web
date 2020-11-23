@@ -1,0 +1,77 @@
+$bg-color: #282844;
+$contacts-font: 'Nunito', sans-serif;
+$color-1: white;
+$color-2: #595c77;
+$color-3: #60dbfc;
+
+html, body {
+    background-color: $bg-color;
+    max-width: 100%;
+    overflow-x: hidden;
+} // html, body
+
+.main-container {
+    max-width: 100%;
+    overflow-x: hidden;
+
+    .items-container {
+
+        &--item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: $color-1 solid 1px;
+            box-sizing: border-box;
+            padding: 25px 40px;
+            margin: 0 100px;
+            color: $color-1;
+            font-family: $contacts-font;
+
+            &_content {
+
+                .top {
+                    box-sizing: border-box;
+                    padding: 50px 0;
+                    font-size: 24px;
+                } // top
+
+                .bottom {
+                    display: flex;
+
+                    .left {
+                        box-sizing: border-box;
+                        padding: 0 20px 0 0;
+                        
+                        img {
+                            height: 35px;
+                            border-radius: 100px;
+                        } // img
+                    } // .left
+
+                    .right {
+                        display: flex;
+                        flex-direction: column;
+                        color: $color-3;
+
+                        span {
+                            
+                            span {
+                                color: $color-2;
+                            } // span
+                        } // span
+                    } // .right
+                } // .bottom
+            } // .items-container--item_content
+
+            &_btnDelete {
+                font-size: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                i {
+                    color: $color-2;
+                } // i
+            } // .contacts-list--item_btnDelete
+        } // .items-container--item
+    } // .items-container
+} // .main-container

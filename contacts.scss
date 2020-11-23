@@ -9,9 +9,11 @@ $color-2: #595c77;
     box-sizing: border-box;
 } // resets
 
-body {
-    background: $bg-color;
-} // body
+html, body {
+    background-color: $bg-color;
+    max-width: 100%;
+    overflow-x: hidden;
+} // html, body
 
 .main-container {
 

@@ -1,0 +1,83 @@
+html, body {
+  background-color: #282844;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.main-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.main-container .items-container--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: white solid 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 25px 40px;
+  margin: 0 100px;
+  color: white;
+  font-family: "Nunito", sans-serif;
+}
+
+.main-container .items-container--item_content .top {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 50px 0;
+  font-size: 24px;
+}
+
+.main-container .items-container--item_content .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-container .items-container--item_content .bottom .left {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 20px 0 0;
+}
+
+.main-container .items-container--item_content .bottom .left img {
+  height: 35px;
+  border-radius: 100px;
+}
+
+.main-container .items-container--item_content .bottom .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #60dbfc;
+}
+
+.main-container .items-container--item_content .bottom .right span span {
+  color: #595c77;
+}
+
+.main-container .items-container--item_btnDelete {
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container .items-container--item_btnDelete i {
+  color: #595c77;
+}
+/*# sourceMappingURL=index.css.map */

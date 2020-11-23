@@ -5,8 +5,10 @@
           box-sizing: border-box;
 }
 
-body {
-  background: #282844;
+html, body {
+  background-color: #282844;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .main-container .contacts-list {

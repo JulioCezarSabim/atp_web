@@ -2,6 +2,6 @@
     session_start();
 
     if (!$_SESSION['email']) {
-        header("location: index.php");
+        header("location: login.php");
         exit();
     }

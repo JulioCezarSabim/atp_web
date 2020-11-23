@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./partials/menu.css">
     <link rel="stylesheet" href="./contacts.css">
 
     <title>Contacts</title>
@@ -14,8 +15,10 @@
 <body>
 
     <?php
-        include_once 'db_connect.php';
-        include 'is_logged.php';
+        include_once "db_connect.php";
+        include_once "is_logged.php";
+
+        include_once "./partials/menu.php";
 
         $current_user_email = $_SESSION['email'];
         $response = $mysqli->query("SELECT id FROM users WHERE email='$current_user_email'") or die($mysqli->error);
@@ -58,7 +61,9 @@
                     </a>
 
                     <div class="contacts-list--item_btnDelete">
-                        <a href="contacts_manager.php?delete=<?php echo $row['id'] ?>"><i class="fas fa-trash-alt"></i></a>
+                        <a href="contacts_manager.php?delete=<?php echo $row['id'] ?>">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
                     </div><!-- contacts-list--item_btnDelete -->
 
                 </div><!-- contacts-list--item -->

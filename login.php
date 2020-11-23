@@ -1,27 +1,27 @@
-<?php
-    include_once 'db_connect.php';
-    session_start();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<body>
 
-    if ($_POST['email'] == NULL || $_POST['password'] == NULL) {
-        header("Location: index.php");
-        exit();
-    }
+    <?php 
+        session_start();
 
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+        if (isset($_SESSION['is_logged'])) {
+            echo 'Usuário ou senha inválidos';
+        }
+        unset($_SESSION['is_logged']);
+    ?>
 
-    $result = $mysqli->query("SELECT name, email FROM users WHERE email='$email' AND password=md5('$password')") or die($mysqli->error);
+    <form action="login_manager.php" method="POST">
+        <input type="text" name="   email" placeholder="Insira seu email" required>
+        <input type="password" name="password" placeholder="Insira sua senha" required>
 
-    if ($result->num_rows == 1) {
-        $user_info = $result->fetch_assoc();
-        
-        $_SESSION['name'] = $user_info['name'];
-        $_SESSION['email'] = $user_info['email'];
+        <button type="submit" name="send">Login</button>
+    </form>
 
-        header("location: contacts.php");
-    }
-    else {
-        $_SESSION['is_logged'] = false;
-        header("location: index.php");
-        exit();
-    }
+</body>
+</html>
