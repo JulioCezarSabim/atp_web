@@ -25,11 +25,43 @@
     <div class="main-container">
 
         <div class="form-container">
+            <div class="form-container--contacts">
+                <div class="form-container--contacts_list">
+
+                    <div class="form-container--contacts_list--contact">
+                        <div class="form-container--contacts_list--contact_image">
+                            <img src="./assets/imgs/contacts_pics/31.jpg" alt="Contact Picture">
+                        </div><!-- form-container--contacts_contact--image -->
+                        <div class="form-container--contacts_list--contact_name">
+                            Aada Wong
+                        </div><!-- form-container--contacts_contact--name -->
+                    </div><!-- form-container--contacts_contact -->
+
+                    <div class="form-container--contacts_list--contact">
+                        <div class="form-container--contacts_contact--image">
+                            <img src="./assets/imgs/contacts_pics/31.jpg" alt="Contact Picture">
+                        </div><!-- form-container--contacts_contact--image -->
+                        <div class="form-container--contacts_contact--name">
+                            Aada Wong
+                        </div><!-- form-container--contacts_contact--name -->
+                    </div><!-- form-container--contacts_contact -->
+
+                    <div class="form-container--contacts_list--contact">
+                        <div class="form-container--contacts_contact--image">
+                            <img src="./assets/imgs/contacts_pics/31.jpg" alt="Contact Picture">
+                        </div><!-- form-container--contacts_contact--image -->
+                        <div class="form-container--contacts_contact--name">
+                            Aada Wong
+                        </div><!-- form-container--contacts_contact--name -->
+                    </div><!-- form-container--contacts_contact -->
+
+                </div><!-- form-container--contacts_list -->
+            </div><!-- form-container--contacts -->
+
             <form action="./items_manager.php" method="POST" class="form-container--form">
                 <input type="text" name="description" placeholder="Descrição do Item..." id="description" required>
                 <input type="date" name="date_lended" value="<?php echo date('Y-m-d'); ?>" required>
                 <input type="date" name="date_return">
-                <input type="text" name="contact_id" placeholder="Id do contato..." required>
 
                 <button type="submit" name="addItem">Cadastrar</button>
             </form>
@@ -39,9 +71,10 @@
 
             <?php while ($row = $items->fetch_assoc()) : ?>
             
-                <div class="items-container--item">
+                <div class="items-container--item <?php if (!$row['date_return'] || $row['date_return'] < date('Y-m-d')) echo 'highlighted'; ?>">
                     <div class="items-container--item_content">
                         <div class="top">
+                            <?php if ($row['date_return'] == NULL || $row['date_return'] < date('Y-m-d')) echo '<i class="fas fa-exclamation-circle"></i>'; ?>
                             <?php echo $row['description']; ?>
                         </div><!-- top -->
 
@@ -59,7 +92,7 @@
 
                             <div class="right">
                                 <span class="date_lended"><span>Data de empréstimo: </span><?php echo $row['date_lended']; ?></span>
-                                <span class="date_return"><span>Data de devolução: </span><?php echo $row['date_return'] ? $row['date_return'] : 'Em aberto'; ?></span>
+                                <span class="date_return" id="date_return"><span>Data de devolução: </span><?php echo $row['date_return'] ? $row['date_return'] : 'Em aberto'; ?></span>
                             </div><!-- left -->
                         </div><!-- bottom -->
                     </div><!-- items-container--item_content -->

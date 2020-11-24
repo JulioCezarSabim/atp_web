@@ -8,6 +8,9 @@ html, body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .main-container .form-container--form input {
@@ -28,6 +31,52 @@ html, body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 15px;
+}
+
+.main-container .form-container--contacts {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  background: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 4px 0 0;
+}
+
+.main-container .form-container--contacts_list {
+  position: absolute;
+  display: none;
+  top: 40px;
+}
+
+.main-container .form-container--contacts_list--contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 20px;
+}
+
+.main-container .form-container--contacts_list--contact_image {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10px 0 0;
+}
+
+.main-container .form-container--contacts_list--contact_image img {
+  border-radius: 100px;
+  height: 30px;
+}
+
+.main-container .form-container--contacts_list--contact_name {
+  font-family: "Nunito", sans-serif;
+  line-height: 30px;
+}
+
+.main-container .form-container--contacts:hover .form-container--contacts_contact--list {
+  display: block;
 }
 
 .main-container .items-container--item {
@@ -100,5 +149,13 @@ html, body {
 
 .main-container .items-container--item_btnDelete i {
   color: #595c77;
+}
+
+.main-container .items-container .highlighted .fa-exclamation-circle {
+  color: rgba(255, 0, 0, 0.6);
+}
+
+.main-container .items-container .highlighted #date_return {
+  color: rgba(255, 0, 0, 0.6);
 }
 /*# sourceMappingURL=index.css.map */

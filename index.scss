@@ -3,6 +3,7 @@ $contacts-font: 'Nunito', sans-serif;
 $color-1: white;
 $color-2: #595c77;
 $color-3: #60dbfc;
+$color-4: #1d1b33;
 
 html, body {
     background-color: $bg-color;
@@ -15,6 +16,7 @@ html, body {
     .form-container {
         box-sizing: border-box;
         padding: 0 100px;
+        display: flex;
 
         &--form {
             
@@ -36,6 +38,50 @@ html, body {
                 padding: 0 15px;
             } // button
         } // .form-container--form
+
+        &--contacts {
+            position: relative;
+            width: 200px;
+            height: 40px;
+            background: white;
+            box-sizing: border-box;
+            margin: 0 4px 0 0;
+
+            &_list {
+                position: absolute;
+                display: none;
+                top: 40px;
+
+                &--contact {
+                    display: flex;
+                    background: white;
+                    box-sizing: border-box;
+                    padding: 5px 20px;
+    
+                    &_image {
+                        box-sizing: border-box;
+                        padding: 0 10px 0 0;
+    
+                        img {
+                            border-radius: 100px;
+                            height: 30px;
+                        } // img
+                    } // .form-container--contacts_contact-image
+    
+                    &_name {
+                        font-family: $contacts-font;
+                        line-height: 30px;
+                    } // .form-container--contacts_list--contact_name
+                } // .form-container--contacts_list--contact
+            } // .form-container--contacts_list
+        } // .form-container--contacts
+
+        &--contacts:hover {
+            
+            .form-container--contacts_contact--list {
+                display: block;
+            } // .form-container--contacts_contact
+        } // .form-container--contacts:hover
     } // .form-container
 
     .items-container {
@@ -97,5 +143,17 @@ html, body {
                 } // i
             } // .contacts-list--item_btnDelete
         } // .items-container--item
+
+        .highlighted {
+
+            .fa-exclamation-circle {
+                color: rgba(red, .6);
+            } // .fa-exclamation-circle
+
+            #date_return {
+                color: rgba(red, .6);
+            } // #date_return
+        } // .highlighted
+
     } // .items-container
 } // .main-container
