@@ -13,7 +13,12 @@ if (isset($_POST['addItem'])) {
     $date_lended = $_POST['date_lended'];
     $date_return = $_POST['date_return'];
 
-    $mysqli->query("INSERT INTO items (description, date_lended, date_return, contacts_id, users_id) VALUES ('$description', '$date_lended', '$date_return', '$contact_id', '$user_id')") or die($mysqli->error);
+    if ($date_return == NULL) {
+        $mysqli->query("INSERT INTO items (description, date_lended, contacts_id, users_id) VALUES ('$description', '$date_lended', '$contact_id', '$user_id')") or die($mysqli->error);
+    }
+    else {
+        $mysqli->query("INSERT INTO items (description, date_lended, date_return, contacts_id, users_id) VALUES ('$description', '$date_lended', '$date_return', '$contact_id', '$user_id')") or die($mysqli->error);
+    }
 
     header('location: index.php');
 }

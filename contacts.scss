@@ -2,6 +2,7 @@ $bg-color: #282844;
 $contacts-font: 'Nunito', sans-serif;
 $color-1: white;
 $color-2: #595c77;
+$color-3: #60dbfc;
 
 * {
     padding: 0;
@@ -17,9 +18,31 @@ html, body {
 
 .main-container {
 
-    .insertNewContact-container {
-        
-    } // .insertNewContact-container
+    .form-container {
+        box-sizing: border-box;
+        padding: 0 100px;
+
+        &--form {
+            
+            input {
+                border: none; 
+                height: 40px;
+                border-radius: 4px;
+                box-sizing: border-box;
+                padding: 0 10px;
+            } // input
+
+            button {
+                height: 40px;
+                border: none;
+                border-radius: 4px;
+                background-color: $color-3;
+                color: white;
+                box-sizing: border-box;
+                padding: 0 15px;
+            } // button
+        } // .form-container--form
+    } // .form-container
 
     .contacts-list {
         font-family: $contacts-font;

@@ -11,8 +11,32 @@ html, body {
 } // html, body
 
 .main-container {
-    max-width: 100%;
-    overflow-x: hidden;
+
+    .form-container {
+        box-sizing: border-box;
+        padding: 0 100px;
+
+        &--form {
+            
+            input {
+                border: none;
+                height: 40px;
+                border-radius: 4px;
+                box-sizing: border-box;
+                padding: 0 10px;
+            } // input
+
+            button {
+                height: 40px;
+                border: none;
+                border-radius: 4px;
+                background-color: $color-3;
+                color: white;
+                box-sizing: border-box;
+                padding: 0 15px;
+            } // button
+        } // .form-container--form
+    } // .form-container
 
     .items-container {
 

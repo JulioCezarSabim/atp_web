@@ -1,0 +1,15 @@
+Um tela de cadastro de usuários;
+Uma tela, ou campo, para cadastrar os items;
+Uma tela de login;
+->Uma tela com os dados do usuário;
+No cadastro dos itens deve ter: Data de empréstimo, descrição do item emprestado, o contato do destinatário, e a data de devolução;
+Se o destinatário tiver cadastro no sistema, usa-se essas informações;
+Ter aba "meus contatos", para cadastrar os destinatários;
+Na tela dos meus contatos, ter um input field para inserir o nome, o endereço, o telefone, e uma foto;
+Destacar os items que já deveriam ter sidos devolvidos, ou que não possuem data de devolução cadastrada;
+Ter uma tela de histórico dos itens que já foram devolvidos, e os que estão pendentes;
+Na tela de contatos, listar os itens emprestados por contato;
+Listar os itens emprestados em aberto;
+Listar os itens emprestados que já foram devolvidos;
+Destacar os items que já passaram da data de devolução ou estão em aberto;
+Criar um botão para marcar como devolvido;

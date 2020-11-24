@@ -11,6 +11,32 @@ html, body {
   overflow-x: hidden;
 }
 
+.main-container .form-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 100px;
+}
+
+.main-container .form-container--form input {
+  border: none;
+  height: 40px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.main-container .form-container--form button {
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #60dbfc;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 15px;
+}
+
 .main-container .contacts-list {
   font-family: "Nunito", sans-serif;
 }

@@ -26,9 +26,9 @@
 
         <div class="form-container">
             <form action="./items_manager.php" method="POST" class="form-container--form">
-                <input type="text" name="description" placeholder="Descrição..." required>
-                <input type="text" name="date_lended" placeholder="Data de empréstimo..." required>
-                <input type="text" name="date_return" placeholder="Data de retorno...">
+                <input type="text" name="description" placeholder="Descrição do Item..." id="description" required>
+                <input type="date" name="date_lended" value="<?php echo date('Y-m-d'); ?>" required>
+                <input type="date" name="date_return">
                 <input type="text" name="contact_id" placeholder="Id do contato..." required>
 
                 <button type="submit" name="addItem">Cadastrar</button>
@@ -59,7 +59,7 @@
 
                             <div class="right">
                                 <span class="date_lended"><span>Data de empréstimo: </span><?php echo $row['date_lended']; ?></span>
-                                <span class="date_return"><span>Data de devolução: </span><?php echo $row['date_return']; ?></span>
+                                <span class="date_return"><span>Data de devolução: </span><?php echo $row['date_return'] ? $row['date_return'] : 'Em aberto'; ?></span>
                             </div><!-- left -->
                         </div><!-- bottom -->
                     </div><!-- items-container--item_content -->

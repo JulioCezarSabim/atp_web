@@ -27,8 +27,8 @@
     ?>
 
    <div class="main-container">
-       <div class="insertNewContact-container">
-            <form action="contacts_manager.php" method="POST">
+       <div class="form-container">
+            <form action="contacts_manager.php" method="POST" class="form-container--form">
                 <input type="text" name="contact-name" placeholder="Nome..." required>
                 <input type="text" name="contact-phone" placeholder="(xx) xxxxx-xxxx">
                 <input type="text" name="contact-pictureUrl" placeholder="Nome do arquivo de foto...">
