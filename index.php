@@ -15,45 +15,35 @@
         include_once 'db_connect.php';
         include_once 'is_logged.php';
         include_once './partials/menu.php';
+        require_once 'items_manager.php';
 
         $current_user_email = $_SESSION['email'];
         $response = $mysqli->query("SELECT id FROM users WHERE email='$current_user_email'") or die($mysqli->error);
         $current_user_id = $response->fetch_assoc()['id'];
         $items = $mysqli->query("SELECT * FROM items WHERE users_id='$current_user_id'") or die($mysqli->error);
+
+        $contacts = $mysqli->query("SELECT * FROM contacts WHERE users_id='$current_user_id'") or die($mysqli->error);
     ?>
 
     <div class="main-container">
 
         <div class="form-container">
             <div class="form-container--contacts">
+                <span><i class="fas fa-chevron-down"></i><span>Contato para empréstimo</span></span>
                 <div class="form-container--contacts_list">
 
-                    <div class="form-container--contacts_list--contact">
-                        <div class="form-container--contacts_list--contact_image">
-                            <img src="./assets/imgs/contacts_pics/31.jpg" alt="Contact Picture">
-                        </div><!-- form-container--contacts_contact--image -->
-                        <div class="form-container--contacts_list--contact_name">
-                            Aada Wong
-                        </div><!-- form-container--contacts_contact--name -->
-                    </div><!-- form-container--contacts_contact -->
-
-                    <div class="form-container--contacts_list--contact">
-                        <div class="form-container--contacts_contact--image">
-                            <img src="./assets/imgs/contacts_pics/31.jpg" alt="Contact Picture">
-                        </div><!-- form-container--contacts_contact--image -->
-                        <div class="form-container--contacts_contact--name">
-                            Aada Wong
-                        </div><!-- form-container--contacts_contact--name -->
-                    </div><!-- form-container--contacts_contact -->
-
-                    <div class="form-container--contacts_list--contact">
-                        <div class="form-container--contacts_contact--image">
-                            <img src="./assets/imgs/contacts_pics/31.jpg" alt="Contact Picture">
-                        </div><!-- form-container--contacts_contact--image -->
-                        <div class="form-container--contacts_contact--name">
-                            Aada Wong
-                        </div><!-- form-container--contacts_contact--name -->
-                    </div><!-- form-container--contacts_contact -->
+                    <?php while ($row = $contacts->fetch_assoc()) : ?>
+                        <a href="index.php?selected_contact=<?php echo $row['id'] ?>">
+                            <div class="form-container--contacts_list--contact">
+                                <div class="form-container--contacts_list--contact_image">
+                                    <img src="./assets/imgs/contacts_pics/<?php echo $row['picture_url'] ?>" alt="Contact Picture">
+                                </div><!-- form-container--contacts_contact--image -->
+                                <div class="form-container--contacts_list--contact_name">
+                                    <?php echo $row['name'] ?>
+                                </div><!-- form-container--contacts_contact--name -->
+                            </div><!-- form-container--contacts_contact -->
+                        </a>
+                    <?php endwhile; ?>
 
                 </div><!-- form-container--contacts_list -->
             </div><!-- form-container--contacts -->
@@ -62,6 +52,7 @@
                 <input type="text" name="description" placeholder="Descrição do Item..." id="description" required>
                 <input type="date" name="date_lended" value="<?php echo date('Y-m-d'); ?>" required>
                 <input type="date" name="date_return">
+                <input type="hidden" name="selected_contact" value="<?php echo $selected_contact; ?>">
 
                 <button type="submit" name="addItem">Cadastrar</button>
             </form>

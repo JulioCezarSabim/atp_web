@@ -9,14 +9,81 @@ html, body {
     background-color: $bg-color;
     max-width: 100%;
     overflow-x: hidden;
+    min-height: 100vh;
 } // html, body
 
 .main-container {
+    font-family: $contacts-font;
 
     .form-container {
         box-sizing: border-box;
         padding: 0 100px;
         display: flex;
+
+        &--contacts {
+            position: relative;
+            background: $bg-color;
+            height: 40px;
+            border-radius: 4px 4px 4px 0;
+            margin: 0 4px 0 0;
+            //width: 300px;
+
+            span {
+                line-height: 40px;
+                color: $color-1;
+                box-sizing: border-box;
+                padding: 0 15px;
+            } // span
+
+            &_list {
+                position: absolute;
+                top: 40px;
+                border-radius: 0 0 4px 4px;
+                overflow: hidden;
+                display: none;
+
+                a {
+                    text-decoration: none;
+                    color: $color-1;
+
+                    .form-container--contacts_list--contact {
+                        display: flex;
+                        box-sizing: border-box;
+                        padding: 10px 15px 10px 10px;
+                        background-color: $bg-color;
+    
+                        &_image {
+                            box-sizing: border-box;
+                            padding: 0 15px 0 0;
+    
+                            img {
+                                height: 30px;
+                                border-radius: 100px;
+                            } // img
+                        } // .form-container--contacts_list--contact_image
+    
+                        &_name {
+                            line-height: 40px;
+                        } // .form-container--contacts_list--contact_name
+    
+                    } // .form-container--contacts_list--contact
+                } // a
+
+                a:hover {
+
+                    .form-container--contacts_list--contact {
+                        background: $color-4;
+                    } // .form-container--contacts_list--contacts
+                } // a:hover
+            } // .form-container--contacts_list
+        } // .form-container--contacts
+
+        &--contacts:hover {
+
+            .form-container--contacts_list {
+                display: block;
+            } // .form-container--contacts_list
+        } // .form-container--contacts:hover
 
         &--form {
             
@@ -38,53 +105,10 @@ html, body {
                 padding: 0 15px;
             } // button
         } // .form-container--form
-
-        &--contacts {
-            position: relative;
-            width: 200px;
-            height: 40px;
-            background: white;
-            box-sizing: border-box;
-            margin: 0 4px 0 0;
-
-            &_list {
-                position: absolute;
-                display: none;
-                top: 40px;
-
-                &--contact {
-                    display: flex;
-                    background: white;
-                    box-sizing: border-box;
-                    padding: 5px 20px;
-    
-                    &_image {
-                        box-sizing: border-box;
-                        padding: 0 10px 0 0;
-    
-                        img {
-                            border-radius: 100px;
-                            height: 30px;
-                        } // img
-                    } // .form-container--contacts_contact-image
-    
-                    &_name {
-                        font-family: $contacts-font;
-                        line-height: 30px;
-                    } // .form-container--contacts_list--contact_name
-                } // .form-container--contacts_list--contact
-            } // .form-container--contacts_list
-        } // .form-container--contacts
-
-        &--contacts:hover {
-            
-            .form-container--contacts_contact--list {
-                display: block;
-            } // .form-container--contacts_contact
-        } // .form-container--contacts:hover
-    } // .form-container
+    }  //.form-container
 
     .items-container {
+        margin: 50px 0 0 0;
 
         &--item {
             display: flex;
@@ -94,13 +118,12 @@ html, body {
             padding: 25px 40px;
             margin: 0 100px;
             color: $color-1;
-            font-family: $contacts-font;
 
             &_content {
 
                 .top {
                     box-sizing: border-box;
-                    padding: 50px 0;
+                    padding: 0 0 50px 0;
                     font-size: 24px;
                 } // top
 
@@ -154,6 +177,5 @@ html, body {
                 color: rgba(red, .6);
             } // #date_return
         } // .highlighted
-
     } // .items-container
 } // .main-container

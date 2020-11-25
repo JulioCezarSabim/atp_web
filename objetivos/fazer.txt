@@ -13,6 +13,9 @@ Listar os itens emprestados em aberto;
 Listar os itens emprestados que já foram devolvidos;
 Destacar os items que já passaram da data de devolução ou estão em aberto;
 Criar um botão para marcar como devolvido;
+Criar um warning quando o usuário não selecionar um contato ao adicionar um item;
+Colocar título nas páginas;
+Colocar título no <title> das páginas;
 
 
 

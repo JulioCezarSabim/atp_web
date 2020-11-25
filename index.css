@@ -2,6 +2,11 @@ html, body {
   background-color: #282844;
   max-width: 100%;
   overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.main-container {
+  font-family: "Nunito", sans-serif;
 }
 
 .main-container .form-container {
@@ -11,6 +16,68 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.main-container .form-container--contacts {
+  position: relative;
+  background: #282844;
+  height: 40px;
+  border-radius: 4px 4px 4px 0;
+  margin: 0 4px 0 0;
+}
+
+.main-container .form-container--contacts span {
+  line-height: 40px;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.main-container .form-container--contacts_list {
+  position: absolute;
+  top: 40px;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  display: none;
+}
+
+.main-container .form-container--contacts_list a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-container .form-container--contacts_list a .form-container--contacts_list--contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 15px 10px 10px;
+  background-color: #282844;
+}
+
+.main-container .form-container--contacts_list a .form-container--contacts_list--contact_image {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 15px 0 0;
+}
+
+.main-container .form-container--contacts_list a .form-container--contacts_list--contact_image img {
+  height: 30px;
+  border-radius: 100px;
+}
+
+.main-container .form-container--contacts_list a .form-container--contacts_list--contact_name {
+  line-height: 40px;
+}
+
+.main-container .form-container--contacts_list a:hover .form-container--contacts_list--contact {
+  background: #1d1b33;
+}
+
+.main-container .form-container--contacts:hover .form-container--contacts_list {
+  display: block;
 }
 
 .main-container .form-container--form input {
@@ -33,50 +100,8 @@ html, body {
   padding: 0 15px;
 }
 
-.main-container .form-container--contacts {
-  position: relative;
-  width: 200px;
-  height: 40px;
-  background: white;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0 4px 0 0;
-}
-
-.main-container .form-container--contacts_list {
-  position: absolute;
-  display: none;
-  top: 40px;
-}
-
-.main-container .form-container--contacts_list--contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: white;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 5px 20px;
-}
-
-.main-container .form-container--contacts_list--contact_image {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 10px 0 0;
-}
-
-.main-container .form-container--contacts_list--contact_image img {
-  border-radius: 100px;
-  height: 30px;
-}
-
-.main-container .form-container--contacts_list--contact_name {
-  font-family: "Nunito", sans-serif;
-  line-height: 30px;
-}
-
-.main-container .form-container--contacts:hover .form-container--contacts_contact--list {
-  display: block;
+.main-container .items-container {
+  margin: 50px 0 0 0;
 }
 
 .main-container .items-container--item {
@@ -92,13 +117,12 @@ html, body {
   padding: 25px 40px;
   margin: 0 100px;
   color: white;
-  font-family: "Nunito", sans-serif;
 }
 
 .main-container .items-container--item_content .top {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 50px 0;
+  padding: 0 0 50px 0;
   font-size: 24px;
 }
 

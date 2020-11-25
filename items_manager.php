@@ -2,13 +2,15 @@
 include_once 'db_connect.php';
 include_once 'is_logged.php';
 
+$selected_contact = '';
+
 if (isset($_POST['addItem'])) {
     
     $user_email = $_SESSION['email'];
     $response = $mysqli->query("SELECT id FROM users WHERE email='$user_email'") or die($mysqli->error);
 
     $user_id = $response->fetch_assoc()['id'];
-    $contact_id = $_POST['contact_id'];
+    $contact_id = $_POST['selected_contact'];
     $description = $_POST['description'];
     $date_lended = $_POST['date_lended'];
     $date_return = $_POST['date_return'];
@@ -28,4 +30,8 @@ if (isset($_GET['delete'])) {
     $mysqli->query("DELETE FROM items WHERE id='$id'");
 
     header('location: index.php');
+}
+
+if (isset($_GET['selected_contact'])) {
+    $selected_contact = $_GET['selected_contact'];
 }
