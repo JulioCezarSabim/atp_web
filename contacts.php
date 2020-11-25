@@ -28,10 +28,10 @@
 
    <div class="main-container">
        <div class="form-container">
-            <form action="contacts_manager.php" method="POST" class="form-container--form">
+            <form action="contacts_manager.php" method="POST" class="form-container--form" enctype="multipart/form-data">
                 <input type="text" name="contact-name" placeholder="Nome..." required>
                 <input type="text" name="contact-phone" placeholder="(xx) xxxxx-xxxx">
-                <input type="text" name="contact-pictureUrl" placeholder="Nome do arquivo de foto...">
+                <input type="file" name="contact-picture">
                 <input type="text" name="contact-address" placeholder="Endereço...">
 
                 <button type="submit" name="addContact">Adicionar Contato</button>
