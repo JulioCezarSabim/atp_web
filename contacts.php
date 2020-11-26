@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="./partials/menu.css">
     <link rel="stylesheet" href="./contacts.css">
 
-    <title>Contacts</title>
+    <?php $page_title = 'Meus contatos'; ?>
+    <title><?php echo $page_title; ?></title>
 </head>
 <body>
 

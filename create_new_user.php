@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
 
-    <title>Create New User</title>
+    <?php $page_title = 'Criar conta'; ?>
+    <title><?php echo $page_title; ?></title>
 </head>
 <body>
     <?php session_start(); session_destroy(); ?>

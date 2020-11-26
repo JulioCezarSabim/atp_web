@@ -34,7 +34,7 @@ if (isset($_POST['createNewUser'])) {
     }
 
 
-    $mysqli->query("INSERT INTO users (name, email, password, picture_name) VALUES ('$name', '$email', md5('$password'), '$fileDirectory')") or die($mysqli->error);
+    $mysqli->query("INSERT INTO users (name, email, password, picture_url) VALUES ('$name', '$email', md5('$password'), '$fileDirectory')") or die($mysqli->error);
 
     header("location: login.php");
 }

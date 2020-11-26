@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./partials/menu.css">
 
-    <title>Document</title>
+    <?php $page_title = 'Meus empréstimos'; ?>
+    <title><?php echo $page_title; ?></title>
 </head>
 <body>
     <?php

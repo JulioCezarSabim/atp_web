@@ -1,5 +1,7 @@
 $color-1: white;
 $color-2: #595c77;
+$color-3: #60dbfc;
+$font: sans-serif;
 
 * {
     padding: 0;
@@ -10,9 +12,14 @@ $color-2: #595c77;
 .menu {
     width: 100vw;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     box-sizing: border-box;
-    padding: 20px 50px 0 0;
+    padding: 20px 50px 0 50px;
+
+    .page-title {
+        color: $color-3;
+        font-family: $font;
+    } // .page-title
 
     &--list {
         display: flex;
