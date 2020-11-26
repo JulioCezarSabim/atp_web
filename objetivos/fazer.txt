@@ -7,25 +7,26 @@ Se o destinatário tiver cadastro no sistema, usa-se essas informações;
 Ter aba "meus contatos", para cadastrar os destinatários;
 Na tela dos meus contatos, ter um input field para inserir o nome, o endereço, o telefone, e uma foto;
 Destacar os items que já deveriam ter sidos devolvidos, ou que não possuem data de devolução cadastrada;
-Ter uma tela de histórico dos itens que já foram devolvidos, e os que estão pendentes;
-Na tela de contatos, listar os itens emprestados por contato;
-Listar os itens emprestados em aberto;
-Listar os itens emprestados que já foram devolvidos;
+->Ter uma tela de histórico dos itens que já foram devolvidos, e os que estão pendentes;
+->Na tela de contatos, listar os itens emprestados por contato;
+->Listar os itens emprestados em aberto;
+->Listar os itens emprestados que já foram devolvidos;
 Destacar os items que já passaram da data de devolução ou estão em aberto;
-Criar um botão para marcar como devolvido;
-Criar um warning quando o usuário não selecionar um contato ao adicionar um item;
-Colocar título nas páginas;
-Colocar título no <title> das páginas;
+->Criar um botão para marcar como devolvido;
+->Criar um warning quando o usuário não selecionar um contato ao adicionar um item;
+->Colocar título nas páginas;
+->Colocar título no <title> das páginas;
+Colocar uma imagem padrão caso o usuário não selecione nenhuma;
 
 
 
 
 Realizar o cadastro dos usuários e dos itens.
 Realizar o login do usuário.
-Permitir ao usuário acessar/configurar seus dados, que ficam salvos.
+->Permitir ao usuário acessar/configurar seus dados, que ficam salvos.
 Realizar o cadastro do item emprestado, data e contato do destinatário.
 Opcionalmente, pode haver a data de devolução combinada.
 Na tela inicial, mostrar lista dos itens emprestados e permitir clicar em botão para cadastrar um novo empréstimo.
 Após a data combinada, o item deve ficar destacado na lista de empréstimo; se não houver data determinada, deve-se destacar também.
-Quando algo for devolvido, deve ser marcado no sistema, que irá salvar a data.
-Opcionalmente, pode gerar relatórios de itens emprestados pendentes.
+->Quando algo for devolvido, deve ser marcado no sistema, que irá salvar a data.
+->Opcionalmente, pode gerar relatórios de itens emprestados pendentes.

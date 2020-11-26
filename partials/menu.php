@@ -1,3 +1,10 @@
+<?php
+    include_once 'db_connect.php';
+    
+    $user_email = $_SESSION['email'];
+    $user_picture = $mysqli->query("SELECT picture_name FROM users WHERE email='$user_email'") or die($mysqli->error);
+?>
+
 <nav class="menu">
     <ul class="menu--list">
         <li class="menu--list_item">
@@ -17,7 +24,7 @@
         </li><!-- menu-list--item -->
 
         <li class="menu--list_item">
-            <img src="./assets/imgs/profile_pics/profile.jpg" alt="Profile Picture">
+            <img src="<?php echo $user_picture->fetch_assoc()['picture_name']; ?>" alt="Profile Picture">
         </li><!-- menu-list--item -->
     </ul><!--menu-list -->
 </nav><!-- menu -->
