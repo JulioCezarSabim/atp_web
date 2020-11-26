@@ -17,7 +17,8 @@ Destacar os items que já passaram da data de devolução ou estão em aberto;
 ->Colocar título nas páginas;
 ->Colocar título no <title> das páginas;
 Colocar uma imagem padrão caso o usuário não selecione nenhuma;
-
+Fazer verificações caso o usuário não insira algum dado;
+Mostrar no nome do arquivo de foto na aba de criar usuário;
 
 
 

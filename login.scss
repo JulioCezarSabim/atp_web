@@ -1,0 +1,102 @@
+$bg-color: #282844;
+$font: 'Nunito', sans-serif;
+$color-1: white;
+$color-2: #595c77;
+$color-3: #60dbfc;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} // reset
+
+body {
+    font-family: $font;
+} // body
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-2;
+
+    .form-container {
+        background-color: $bg-color;
+        border-radius: 15px;
+        box-sizing: border-box;
+        padding: 50px;
+        box-shadow: 0 6px 15px rgba(0,0,0, .4);
+
+        h1 {
+            text-align: center;
+            font-size: 49px;
+            color: $color-1;
+        } // h1
+
+        h2 {
+            color: $color-2;
+            text-align: center;
+            font-size: 24px;
+
+            a:visited,
+            a:link,
+            a {
+                color: $color-3;
+            }
+        } // h2
+
+        form {
+            display: flex;
+            flex-direction: column;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 40px 0 0 0;
+            
+            input {
+                height: 50px;
+                width: 500px;
+                border-radius: 8px;
+                box-sizing: border-box;
+                padding: 0 20px;
+                line-height: 50px;
+                margin: 5px 0;
+                border: none;
+                font-family: $font;
+            } // input
+
+            input[type='file'] {
+                display: none;
+            }
+
+            label {
+                background: white;
+                height: 50px;
+                width: 500px;
+                border-radius: 8px;
+                margin: 5px 0;
+                line-height: 50px;
+                box-sizing: border-box;
+                padding: 0 20px;
+                color: #7b7b7b;
+                font-size: 14px;
+            } // label
+
+            button {
+                width: 200px;
+                height: 50px;
+                background-color: $color-3;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                width: 500px;
+                font-size: 18px;
+                margin: 50px 0 0 0;
+            } // button
+        } // form
+    } // .form-container
+} // .main-container

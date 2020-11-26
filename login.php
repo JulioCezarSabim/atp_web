@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+
     <title>Main Page</title>
 </head>
 <body>
@@ -16,12 +21,22 @@
         unset($_SESSION['is_logged']);
     ?>
 
-    <form action="login_manager.php" method="POST">
-        <input type="text" name="   email" placeholder="Insira seu email" required>
-        <input type="password" name="password" placeholder="Insira sua senha" required>
+    <div class="main-container">
 
-        <button type="submit" name="send">Login</button>
-    </form>
+        <div class="form-container">
+            <h1>Entrar na sua conta</h1>
+            <h2>Ainda não possui uma conta? <a href="create_new_user.php">Crie uma</a></h2>
+
+            <form action="login_manager.php" method="POST">
+                <input type="text" name="   email" placeholder="Insira seu email" required>
+                <input type="password" name="password" placeholder="Insira sua senha" required>
+
+                <button type="submit" name="send">Login</button>
+            </form>
+
+        </div><!-- form-container -->
+
+    </div><!-- main-container -->
 
 </body>
 </html>
