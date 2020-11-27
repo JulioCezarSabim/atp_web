@@ -63,7 +63,15 @@
 
             <?php while ($row = $items->fetch_assoc()) : ?>
             
-                <div class="items-container--item <?php if (!$row['date_return'] || $row['date_return'] < date('Y-m-d')) echo 'highlighted'; ?>">
+                <div class="items-container--item 
+                    <?php
+                        if (!$row['date_returned']) {
+                            if (!$row['date_return'] || $row['date_return'] < date('Y-m-d')) echo 'highlighted';
+                        }
+                        else {
+                            echo 'finished';
+                        }
+                    ?>">
                     <div class="items-container--item_content">
                         <div class="top">
                             <?php
@@ -97,7 +105,12 @@
 
                                 <span class="date_return" id="date_return">
                                     <span>Data de devolução: </span>
-                                    <?php echo $row['date_return'] ? $row['date_return'] : 'Em aberto'; ?>
+                                    <?php
+                                        if ($row['date_returned']) echo $row['date_returned'];
+                                        else {
+                                            echo $row['date_return'] ? $row['date_return'] : 'Em aberto';
+                                        }
+                                    ?>
                                 </span>
                             </div><!-- left -->
                         </div><!-- bottom -->
@@ -105,7 +118,7 @@
 
                     <div class="items-container--item_actions">
                         <a href="items_manager.php?finished=<?php echo $row['id']; ?>">
-                            <i class="far fa-check-circle <?php echo $row['finished'] ? 'item_finished' : ''; ?>"></i>
+                            <i class="far fa-check-circle"></i>
                         </a>
                         <a href="items_manager.php?delete=<?php echo $row['id'] ?>">
                             <i class="fas fa-trash-alt"></i>

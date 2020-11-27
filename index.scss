@@ -166,12 +166,19 @@ html, body {
                     color: $color-2;
                     margin: 15px 0;
                 } // i
-
-                .item_finished {
-                    color: green;
-                } // .item_finished
             } // .contacts-list--item_btnDelete
         } // .items-container--item
+
+        .finished {
+
+            .fa-check-circle {
+                color: green;
+            } // .fa-check-circle
+
+            .right {
+                color: green;
+            } // .right
+        } // .finished
 
         .highlighted {
 

@@ -180,7 +180,11 @@ html, body {
   margin: 15px 0;
 }
 
-.main-container .items-container--item_actions .item_finished {
+.main-container .items-container .finished .fa-check-circle {
+  color: green;
+}
+
+.main-container .items-container .finished .right {
   color: green;
 }
 

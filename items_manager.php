@@ -41,9 +41,10 @@ if (isset($_GET['finished'])) {
 
     $response = $mysqli->query("SELECT finished FROM items WHERE id=$id") or die($mysqli->error);
     $finished = $response->fetch_assoc()['finished'];
+    $current_date = date('Y-m-d');
 
-    if ($finished) $mysqli->query("UPDATE items SET finished=0 WHERE id='$id'") or die($mysqli->error);
-    else $mysqli->query("UPDATE items SET finished=1 WHERE id='$id'") or die($mysqli->error);
+    if ($finished) $mysqli->query("UPDATE items SET finished=NULL, date_returned=NULL WHERE id='$id'") or die($mysqli->error);
+    else $mysqli->query("UPDATE items SET finished=1, date_returned='$current_date' WHERE id='$id'") or die($mysqli->error);
 
     header('location: index.php');
 }
