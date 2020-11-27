@@ -155,15 +155,21 @@ html, body {
                 } // .bottom
             } // .items-container--item_content
 
-            &_btnDelete {
+            &_actions {
                 font-size: 25px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
                 
                 i {
                     color: $color-2;
+                    margin: 15px 0;
                 } // i
+
+                .item_finished {
+                    color: green;
+                } // .item_finished
             } // .contacts-list--item_btnDelete
         } // .items-container--item
 

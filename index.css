@@ -158,7 +158,7 @@ html, body {
   color: #595c77;
 }
 
-.main-container .items-container--item_btnDelete {
+.main-container .items-container--item_actions {
   font-size: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,10 +169,19 @@ html, body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.main-container .items-container--item_btnDelete i {
+.main-container .items-container--item_actions i {
   color: #595c77;
+  margin: 15px 0;
+}
+
+.main-container .items-container--item_actions .item_finished {
+  color: green;
 }
 
 .main-container .items-container .highlighted .fa-exclamation-circle {

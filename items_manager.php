@@ -35,3 +35,15 @@ if (isset($_GET['delete'])) {
 if (isset($_GET['selected_contact'])) {
     $selected_contact = $_GET['selected_contact'];
 }
+
+if (isset($_GET['finished'])) {
+    $id = $_GET['finished'];
+
+    $response = $mysqli->query("SELECT finished FROM items WHERE id=$id") or die($mysqli->error);
+    $finished = $response->fetch_assoc()['finished'];
+
+    if ($finished) $mysqli->query("UPDATE items SET finished=0 WHERE id='$id'") or die($mysqli->error);
+    else $mysqli->query("UPDATE items SET finished=1 WHERE id='$id'") or die($mysqli->error);
+
+    header('location: index.php');
+}

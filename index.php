@@ -66,8 +66,15 @@
                 <div class="items-container--item <?php if (!$row['date_return'] || $row['date_return'] < date('Y-m-d')) echo 'highlighted'; ?>">
                     <div class="items-container--item_content">
                         <div class="top">
-                            <?php if ($row['date_return'] == NULL || $row['date_return'] < date('Y-m-d')) echo '<i class="fas fa-exclamation-circle"></i>'; ?>
-                            <?php echo $row['description']; ?>
+                            <?php
+                                if ($row['date_return'] == NULL || $row['date_return'] < date('Y-m-d')) {
+                                    if ($row['finished'] != 1) echo '<i class="fas fa-exclamation-circle"></i>';
+                                }
+                            ?>
+                            <?php
+                                $description = $row['description'];
+                                echo !$row['finished'] ? $row['description'] : "<s>$description</s>"
+                            ?>
                         </div><!-- top -->
 
                         <div class="bottom">
@@ -83,13 +90,23 @@
                             </div><!-- right -->
 
                             <div class="right">
-                                <span class="date_lended"><span>Data de empréstimo: </span><?php echo $row['date_lended']; ?></span>
-                                <span class="date_return" id="date_return"><span>Data de devolução: </span><?php echo $row['date_return'] ? $row['date_return'] : 'Em aberto'; ?></span>
+                                <span class="date_lended">
+                                    <span>Data de empréstimo: </span>
+                                    <?php echo $row['date_lended']; ?>
+                                </span>
+
+                                <span class="date_return" id="date_return">
+                                    <span>Data de devolução: </span>
+                                    <?php echo $row['date_return'] ? $row['date_return'] : 'Em aberto'; ?>
+                                </span>
                             </div><!-- left -->
                         </div><!-- bottom -->
                     </div><!-- items-container--item_content -->
 
-                    <div class="items-container--item_btnDelete">
+                    <div class="items-container--item_actions">
+                        <a href="items_manager.php?finished=<?php echo $row['id']; ?>">
+                            <i class="far fa-check-circle <?php echo $row['finished'] ? 'item_finished' : ''; ?>"></i>
+                        </a>
                         <a href="items_manager.php?delete=<?php echo $row['id'] ?>">
                             <i class="fas fa-trash-alt"></i>
                         </a>
