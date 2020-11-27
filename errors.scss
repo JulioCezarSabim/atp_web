@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} // reset
+
+.error-container {
+    display: none;
+} // .error-container
+
+.error {
+    display: block;
+    position: fixed;
+    top: 0;
+    background-color: rgba(red, .4);
+    width: 100vw;
+    text-align: center;
+    color: red;
+
+    span {
+        line-height: 50px;
+    }
+} // .error

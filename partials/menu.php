@@ -1,4 +1,5 @@
 <?php
+    include_once 'is_logged.php';
     include_once 'db_connect.php';
     
     $user_email = $_SESSION['email'];
@@ -18,7 +19,7 @@
         </li><!-- menu-list--item -->
 
         <li class="menu--list_item">
-            <a href="my_info"><i class="fas fa-user"></i></a>
+            <a href="user_info.php"><i class="fas fa-user"></i></a>
         </li><!-- menu-list--item -->
 
         <li class="menu--list_item">

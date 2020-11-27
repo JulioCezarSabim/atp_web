@@ -17,6 +17,7 @@
         
         $_SESSION['name'] = $user_info['name'];
         $_SESSION['email'] = $user_info['email'];
+        $_SESSION['show_error'] = null;
 
         header("location: index.php");
     }

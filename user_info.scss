@@ -1,0 +1,16 @@
+$bg-color: #282844;
+$contacts-font: 'Nunito', sans-serif;
+$color-1: white;
+$color-2: #595c77;
+$color-3: #60dbfc;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} // reset
+
+body {
+    background-color: $bg-color;
+    font-family: $contacts-font;
+}
