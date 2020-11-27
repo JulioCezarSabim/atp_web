@@ -27,19 +27,29 @@
         $infos = $response->fetch_array();
     ?>
 
-    <img src="<?php echo $infos['picture_url']; ?>" alt="User Picture">
-    <h3><?php echo $infos['email']; ?></h3>
-    
-    <form action="user_manager.php" method="POST">
-        <input type="text" value="<?php echo $infos['name']; ?>" name="name">
-        <input type="password" placeholder="Senha atual" name="current_passwd">
-        <input type="password" placeholder="Nova senha" name="new_passwd">
-        <input type="password" placeholder="Repita a nova senha" name="confirmation_new_passwd">
+    <div class="main-container">
 
-        <button type="submit" name="update_user_info">Atualizar meus dados</button>
-    </form>
+        <div class="info-container">
+            <div class="picture-container">
+                <img src="<?php echo $infos['picture_url']; ?>" alt="User Picture">
+            </div><!-- picture-container -->
 
-    
-    
+            <div class="email-container">
+                <?php echo $infos['email']; ?>
+            </div><!-- email-container -->
+
+            <form action="user_manager.php" method="POST">
+                <input type="text" value="<?php echo $infos['name']; ?>" name="name" id="name">
+                <input type="password" placeholder="Senha atual" name="current_passwd" id="current_passwd">
+                <input type="password" placeholder="Nova senha" name="new_passwd" id="new_passwd">
+                <input type="password" placeholder="Repita a nova senha" name="confirmation_new_passwd" id="confirmation_new_passwd">
+
+                <button type="submit" name="update_user_info">Atualizar meus dados</button>
+            </form>
+
+        </div><!-- info-container -->
+        
+    </div><!-- main-container -->
+
 </body>
 </html>

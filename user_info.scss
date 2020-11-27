@@ -14,3 +14,67 @@ body {
     background-color: $bg-color;
     font-family: $contacts-font;
 }
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 100px 0 0 0;
+
+    .info-container {
+        //background-color: $color-2;
+        //width: 500px;
+        //height: 500px;
+        //border-radius: 15px;
+        //box-shadow: 0 6px 15px rgba(0,0,0, .4);
+
+        .picture-container {
+            display: flex;
+            justify-items: center;
+            margin: 0 0 20px 0;
+
+            img {
+                max-width: 200px;
+                margin: auto;
+            }
+        } // .picture-container
+
+        .email-container {
+            display: block;
+            background: white;
+            width: 400px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            padding: 0 15px;
+            margin: 0 0 5px 0;
+        } // .email-container
+
+        form {
+            display: flex;
+            flex-direction: column;
+            
+            input {
+                width: 400px;
+                height: 40px;
+                line-height: 40px;
+                box-sizing: border-box;
+                padding: 0 15px;
+                background: white;
+                border: none;
+                margin: 5px 0;
+                border-radius: 8px;
+            } // input
+
+            button {
+                width: 400px;
+                height: 40px;
+                margin: 5px 0 0 0;
+                background-color: #60dbfc;
+                border: none;
+                border-radius: 8px;
+            } // button
+        } // form
+    } // .info-container
+} // .main-container

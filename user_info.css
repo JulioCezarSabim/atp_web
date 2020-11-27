@@ -9,4 +9,74 @@ body {
   background-color: #282844;
   font-family: "Nunito", sans-serif;
 }
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 100px 0 0 0;
+}
+
+.main-container .info-container .picture-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  margin: 0 0 20px 0;
+}
+
+.main-container .info-container .picture-container img {
+  max-width: 200px;
+  margin: auto;
+}
+
+.main-container .info-container .email-container {
+  display: block;
+  background: white;
+  width: 400px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 0 5px 0;
+}
+
+.main-container .info-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-container .info-container form input {
+  width: 400px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 15px;
+  background: white;
+  border: none;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+
+.main-container .info-container form button {
+  width: 400px;
+  height: 40px;
+  margin: 5px 0 0 0;
+  background-color: #60dbfc;
+  border: none;
+  border-radius: 8px;
+}
 /*# sourceMappingURL=user_info.css.map */
