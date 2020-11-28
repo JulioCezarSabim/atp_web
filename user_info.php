@@ -46,6 +46,7 @@
 
                 <button type="submit" name="update_user_info">Atualizar meus dados</button>
             </form>
+            <a href="index.php" class="btn-back">Cancelar</a>
 
         </div><!-- info-container -->
         

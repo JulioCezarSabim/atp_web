@@ -76,5 +76,19 @@ body {
                 border-radius: 8px;
             } // button
         } // form
+
+        .btn-back {
+            width: 400px;
+            height: 40px;
+            margin: 10px 0 0 0;
+            background: rgba(red, .4);
+            color: white;
+            display: inline-block;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+        } // .back
     } // .info-container
 } // .main-container

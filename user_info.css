@@ -79,4 +79,18 @@ body {
   border: none;
   border-radius: 8px;
 }
+
+.main-container .info-container .btn-back {
+  width: 400px;
+  height: 40px;
+  margin: 10px 0 0 0;
+  background: rgba(255, 0, 0, 0.4);
+  color: white;
+  display: inline-block;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
 /*# sourceMappingURL=user_info.css.map */
