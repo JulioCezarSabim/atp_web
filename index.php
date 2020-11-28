@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./partials/menu.css">
+    <link rel="stylesheet" href="errors.css">
 
     <?php $page_title = 'Meus empréstimos'; ?>
     <title><?php echo $page_title; ?></title>
@@ -17,6 +18,7 @@
         include_once 'is_logged.php';
         include_once './partials/menu.php';
         require_once 'items_manager.php';
+        include_once 'errors.php';
 
         $current_user_email = $_SESSION['email'];
         $response = $mysqli->query("SELECT id FROM users WHERE email='$current_user_email'") or die($mysqli->error);

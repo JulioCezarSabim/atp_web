@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./partials/menu.css">
     <link rel="stylesheet" href="./contacts.css">
+    <link rel="stylesheet" href="errors.css">
 
     <?php $page_title = 'Meus contatos'; ?>
     <title><?php echo $page_title; ?></title>
@@ -18,7 +19,7 @@
     <?php
         include_once "db_connect.php";
         include_once "is_logged.php";
-
+        include_once 'errors.php';
         include_once "./partials/menu.php";
 
         $current_user_email = $_SESSION['email'];
@@ -32,7 +33,8 @@
             <form action="contacts_manager.php" method="POST" class="form-container--form" enctype="multipart/form-data">
                 <input type="text" name="contact-name" placeholder="Nome..." required>
                 <input type="text" name="contact-phone" placeholder="(xx) xxxxx-xxxx">
-                <input type="file" name="contact-picture">
+                <input type="file" name="contact-picture" id="contact-picture">
+                <label for="contact-picture">Selecione uma foto...</label>
                 <input type="text" name="contact-address" placeholder="Endereço...">
 
                 <button type="submit" name="addContact">Adicionar Contato</button>

@@ -16,9 +16,7 @@
     <?php 
         session_start();
 
-        if (isset($_SESSION['is_logged'])) {
-            echo 'Usuário ou senha inválidos';
-        }
+        if (isset($_SESSION['is_logged'])) echo 'Usuário ou senha inválidos';
         unset($_SESSION['is_logged']);
     ?>
 
