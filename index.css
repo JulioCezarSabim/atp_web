@@ -16,7 +16,7 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 50px 0 0 0;
+  margin: 50px 0 50px 0;
 }
 
 .main-container .form-container--contacts {
@@ -99,6 +99,33 @@ html, body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 15px;
+}
+
+.main-container .counter-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 115px;
+}
+
+.main-container .counter-container a {
+  text-decoration: none;
+  margin: 0 20px 0 0;
+}
+
+.main-container .counter-container #todos {
+  color: #595c77;
+}
+
+.main-container .counter-container #devolvidos {
+  color: green;
+}
+
+.main-container .counter-container #pendentes {
+  color: rgba(255, 0, 0, 0.6);
+}
+
+.main-container .counter-container a:hover {
+  text-decoration: underline;
 }
 
 .main-container .items-container {

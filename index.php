@@ -23,7 +23,18 @@
         $current_user_email = $_SESSION['email'];
         $response = $mysqli->query("SELECT id FROM users WHERE email='$current_user_email'") or die($mysqli->error);
         $current_user_id = $response->fetch_assoc()['id'];
-        $items = $mysqli->query("SELECT * FROM items WHERE users_id='$current_user_id'") or die($mysqli->error);
+
+        if (isset($_GET['list'])) {
+            $list = $_GET['list'];
+            
+            if ($list == 'pendentes') $items = $mysqli->query("SELECT * FROM items WHERE users_id=1 AND finished IS NULL") or die($mysqli->error);
+            else if ($list == 'todos') $items = $mysqli->query("SELECT * FROM items WHERE users_id='$current_user_id'") or die($mysqli->error);
+            else if ($list == 'devolvidos') $items = $mysqli->query("SELECT * FROM items WHERE users_id=1 AND finished IS NOT NULL") or die($mysqli->error);
+            else $items = $mysqli->query("SELECT * FROM items WHERE users_id='$current_user_id'") or die($mysqli->error);
+        }
+        else {
+            $items = $mysqli->query("SELECT * FROM items WHERE users_id='$current_user_id'") or die($mysqli->error);
+        }
 
         $contacts = $mysqli->query("SELECT * FROM contacts WHERE users_id='$current_user_id'") or die($mysqli->error);
     ?>
@@ -60,6 +71,12 @@
                 <button type="submit" name="addItem">Cadastrar</button>
             </form>
         </div><!-- form-container -->
+
+        <div class="counter-container">
+            <a href="index.php?list=todos" id="todos">Todos</a>
+            <a href="index.php?list=devolvidos" id="devolvidos">Devolvidos</a>
+            <a href="index.php?list=pendentes" id="pendentes">Pendentes</a>
+        </div><!-- counter-container -->
 
         <div class="items-container">
 

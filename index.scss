@@ -19,7 +19,7 @@ html, body {
         box-sizing: border-box;
         padding: 0 100px;
         display: flex;
-        margin: 50px 0 0 0;
+        margin: 50px 0 50px 0;
 
         &--contacts {
             position: relative;
@@ -107,6 +107,30 @@ html, body {
             } // button
         } // .form-container--form
     }  //.form-container
+
+    .counter-container {
+        box-sizing: border-box;
+        padding: 0 115px;
+
+        a {
+            text-decoration: none;
+            margin: 0 20px 0 0;
+        } // a
+        #todos {
+            color: $color-2;
+        } // #todos
+        
+        #devolvidos {
+            color: green;
+        } // #devolvidos
+
+        #pendentes {
+            color: rgba(red, .6);
+        } // #pendentes
+        a:hover {
+            text-decoration: underline;
+        }
+    } // .counter-container
 
     .items-container {
         margin: 50px 0 0 0;
