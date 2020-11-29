@@ -27,9 +27,9 @@
         if (isset($_GET['list'])) {
             $list = $_GET['list'];
             
-            if ($list == 'pendentes') $items = $mysqli->query("SELECT * FROM items WHERE users_id=1 AND finished IS NULL") or die($mysqli->error);
+            if ($list == 'pendentes') $items = $mysqli->query("SELECT * FROM items WHERE users_id='$current_user_id' AND finished IS NULL") or die($mysqli->error);
             else if ($list == 'todos') $items = $mysqli->query("SELECT * FROM items WHERE users_id='$current_user_id'") or die($mysqli->error);
-            else if ($list == 'devolvidos') $items = $mysqli->query("SELECT * FROM items WHERE users_id=1 AND finished IS NOT NULL") or die($mysqli->error);
+            else if ($list == 'devolvidos') $items = $mysqli->query("SELECT * FROM items WHERE users_id='$current_user_id' AND finished IS NOT NULL") or die($mysqli->error);
             else $items = $mysqli->query("SELECT * FROM items WHERE users_id='$current_user_id'") or die($mysqli->error);
         }
         else {

@@ -81,4 +81,6 @@ if (isset($_POST['update_user_info'])) {
     }
 
     $mysqli->query("UPDATE users SET name='$name' WHERE email='$email'") or die($mysqli->error);
+
+    header('location: user_info.php');
 }
